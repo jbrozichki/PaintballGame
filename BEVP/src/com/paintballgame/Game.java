@@ -6,16 +6,29 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 
-public class testclass extends BasicGame{
+import com.paintballgame.engine.entity.Entity;
+
+
+
+/**
+ * 
+ * 
+ * 
+ * This is the Game class that controls the startup and renderi
+ *
+ */
+public class Game extends BasicGame {
+	
+		Entity map = null;
 	
 		 
-	    public testclass()
+		public Game()
 	    {
-	        super("Birds eye view paintball!!");
+	        super("Paintball XXX");
 	    }
 	 
 	    @Override
-	    public void init(GameContainer gc) 
+	    public void init(GameContainer gc) //This is loaded before our game starts. We load maps, images, and other resources.
 				throws SlickException {
 	 
 	    }
@@ -37,9 +50,9 @@ public class testclass extends BasicGame{
 				throws SlickException
 	    {
 	         AppGameContainer app = 
-				new AppGameContainer(new testclass());
+				new AppGameContainer(new Game());
 	 
-	         app.setDisplayMode(800, 600, false);
+	         app.setDisplayMode(1280, 720, false);
 	         app.start();
 	    }
 
