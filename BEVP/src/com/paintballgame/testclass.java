@@ -11,7 +11,7 @@ public class testclass extends BasicGame{
 		 
 	    public testclass()
 	    {
-	        super("Birds eye view paintball");
+	        super("Birds eye view paintball!!");
 	    }
 	 
 	    @Override
