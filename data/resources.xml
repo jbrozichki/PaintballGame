@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+<!-- GAMEPLAY -->
+  <!-- Background -->
+  <resource type="image" id="MAP">\data\map.jpg</resource>
+  <!-- HUD -->
+
+  <!--  Player Animations -->
+
+  <!-- Blade animation -->
+
+  <!-- SOUNDS -->
+
+</resources>
