@@ -18,10 +18,8 @@ public class MapRenderComponent extends RenderComponent {
 	@Override
 	public void render(GameContainer gc, StateBasedGame sb, Graphics gr) {
 		
-		//int scale = (gc.getHeight()/image.getHeight());
-		
-		//image = image.getScaledCopy(scale);
-		gr.drawImage(image, (gc.getWidth()/2)-(image.getWidth()/2), 0);
+		Image scl = image.getScaledCopy(600, gc.getHeight());
+		gr.drawImage(scl, (gc.getWidth()/2)-(scl.getWidth()/2), 0);
 		gr.drawOval(50, 50, 20, 20);
 	}
  
