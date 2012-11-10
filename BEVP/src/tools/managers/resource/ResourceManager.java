@@ -184,7 +184,10 @@ public class ResourceManager {
 			image = new Image(path);
 		} catch (SlickException e) {
 			throw new SlickException("Could not load image", e);
+		} finally {
+			System.out.println(System.getProperty("user.dir"));
 		}
+
  
 		this.imageMap.put(id, image);
  

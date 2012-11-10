@@ -3,14 +3,13 @@ package com.paintballgame.engine.component.render;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
-import org.newdawn.slick.geom.Vector2f;
 import org.newdawn.slick.state.StateBasedGame;
  
-public class ImageRenderComponent extends RenderComponent {
+public class MapRenderComponent extends RenderComponent {
  
 	Image image;
  
-	public ImageRenderComponent(String id, Image image)
+	public MapRenderComponent(String id, Image image)
 	{
 		super(id);
 		this.image = image;
@@ -18,14 +17,13 @@ public class ImageRenderComponent extends RenderComponent {
  
 	@Override
 	public void render(GameContainer gc, StateBasedGame sb, Graphics gr) {
-		Vector2f pos = owner.getPosition();
- 
-		image.draw(pos.x, pos.y, 1);
+
+		gr.drawImage(image, 0, 0);
 	}
  
 	@Override
 	public void update(GameContainer gc, StateBasedGame sb, int delta) {
-		image.rotate(owner.getRotation() - image.getRotation());
+		
 	}
  
 }
