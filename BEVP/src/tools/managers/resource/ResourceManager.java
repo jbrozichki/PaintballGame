@@ -199,13 +199,6 @@ public class ResourceManager {
 	}
  
  
- 
- 
- 
- 
- 
- 
- 
 	private class ResourceAnimationData{
 		int duration;
 		int tw;

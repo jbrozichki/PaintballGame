@@ -18,9 +18,9 @@ public class MapRenderComponent extends RenderComponent {
 	@Override
 	public void render(GameContainer gc, StateBasedGame sb, Graphics gr) {
 		
-		Image scl = image.getScaledCopy(600, gc.getHeight());
+		Image scl = image.getScaledCopy(500, gc.getHeight());
 		gr.drawImage(scl, (gc.getWidth()/2)-(scl.getWidth()/2), 0);
-		gr.drawOval(50, 50, 20, 20);
+
 	}
  
 	@Override

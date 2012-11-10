@@ -38,7 +38,7 @@ public class Entity {
             renderComponent = (RenderComponent)component;
  
         component.setOwnerEntity(this);
-	components.add(component);
+        components.add(component);
     }
  
     public Component getComponent(String id)
