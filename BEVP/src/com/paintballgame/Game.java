@@ -70,7 +70,7 @@ public class Game extends BasicGame {
 	         AppGameContainer app = 
 				new AppGameContainer(new Game());
 	 
-	         app.setDisplayMode(1280, 720, false);
+	         app.setDisplayMode(900, 500, false);
 	         app.start();
 	    }
 
