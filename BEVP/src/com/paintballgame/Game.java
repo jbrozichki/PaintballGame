@@ -4,8 +4,14 @@ import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.util.ResourceLoader;
+import org.newdawn.slick.util.ResourceLocation;
 
+import tools.managers.resource.ResourceManager;
+
+import com.paintballgame.engine.component.render.ImageRenderComponent;
 import com.paintballgame.engine.entity.Entity;
 
 
@@ -14,11 +20,13 @@ import com.paintballgame.engine.entity.Entity;
  * 
  * 
  * 
- * This is the Game class that controls the startup and renderi
+ * This is the Game class runs our game, using the init(), update, and render methods.
  *
  */
 public class Game extends BasicGame {
 	
+		ResourceManager rl = null;
+
 		Entity map = null;
 	
 		 
@@ -30,6 +38,13 @@ public class Game extends BasicGame {
 	    @Override
 	    public void init(GameContainer gc) //This is loaded before our game starts. We load maps, images, and other resources.
 				throws SlickException {
+	    	
+	    	rl = ResourceManager.getInstance();
+	    	 	
+	    	rl.loadImage("MAP", "/data/map.jpg");
+	    	Image img =  rl.getImage("MAP");
+	    	
+	    	map.AddComponent(new ImageRenderComponent("BackgroundMap", img));
 	 
 	    }
 	 
